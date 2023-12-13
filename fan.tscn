@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://by5xf84k48421"]
+
+[ext_resource type="Texture2D" uid="uid://caydobarkq1ta" path="res://tiles/spritesheet.png" id="1_so1ee"]
+[ext_resource type="Script" path="res://fan.gd" id="2_dhsry"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46gts"]
+atlas = ExtResource("1_so1ee")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_44dnk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46gts")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="fan" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_44dnk")
+script = ExtResource("2_dhsry")

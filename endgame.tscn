@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm2ncxp247yfi"]
+
+[ext_resource type="Script" path="res://endgame.gd" id="1_0ocf6"]
+[ext_resource type="Texture2D" uid="uid://lxupjophogmv" path="res://assets/red-gameover.png" id="2_ty3et"]
+
+[node name="endgame" type="Node2D"]
+script = ExtResource("1_0ocf6")
+
+[node name="Red-gameover" type="Sprite2D" parent="."]
+position = Vector2(575, 327)
+scale = Vector2(0.598958, 0.6)
+texture = ExtResource("2_ty3et")
+
+[node name="start" type="Button" parent="."]
+modulate = Color(0.176471, 1, 1, 1)
+self_modulate = Color(0.14902, 1, 1, 1)
+offset_left = 338.0
+offset_top = 416.0
+offset_right = 450.0
+offset_bottom = 470.0
+text = "Try again !"
+
+[node name="quit1" type="Button" parent="."]
+modulate = Color(0.560784, 0.0588235, 0, 1)
+self_modulate = Color(0.596078, 0, 0.0666667, 1)
+offset_left = 638.0
+offset_top = 418.0
+offset_right = 746.0
+offset_bottom = 470.0
+text = "Quit !"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 368.0
+offset_top = 336.0
+offset_right = 721.0
+offset_bottom = 412.0
+color = Color(0.0352941, 0.113725, 0.215686, 1)
+
+[node name="score_label" type="Label" parent="."]
+offset_left = 440.0
+offset_top = 361.0
+offset_right = 666.0
+offset_bottom = 400.0
+text = "Score"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit1" to="." method="_on_quit_1_pressed"]

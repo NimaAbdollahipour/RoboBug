@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu3xl4ppxfgea"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_y48st"]
+[ext_resource type="Texture2D" uid="uid://4b38mec4v83x" path="res://assets/intro.png" id="2_4xldl"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_y48st")
+
+[node name="Intro" type="Sprite2D" parent="."]
+position = Vector2(577, 325)
+scale = Vector2(0.630729, 0.628704)
+texture = ExtResource("2_4xldl")
+
+[node name="start" type="Button" parent="Intro"]
+modulate = Color(0.34902, 1, 1, 1)
+self_modulate = Color(0.188235, 1, 1, 1)
+offset_left = -474.054
+offset_top = -34.9926
+offset_right = -231.054
+offset_bottom = 38.0074
+theme_override_font_sizes/font_size = 36
+text = "Start !"
+
+[node name="quit" type="Button" parent="Intro"]
+modulate = Color(0.411765, 0.721569, 0.819608, 1)
+self_modulate = Color(0.360784, 0.882353, 0.901961, 1)
+offset_left = 240.991
+offset_top = -31.8115
+offset_right = 483.991
+offset_bottom = 41.1885
+theme_override_font_sizes/font_size = 36
+text = "Quit !"
+
+[connection signal="pressed" from="Intro/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Intro/quit" to="." method="_on_quit_pressed"]
